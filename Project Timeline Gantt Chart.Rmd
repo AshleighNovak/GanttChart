@@ -1,0 +1,67 @@
+---
+title: "Project Timeline Gantt Chart"
+author: "Ashleigh Novak"
+date: "11/13/2020"
+output: html_document
+---
+
+#Load in packages
+```{r}
+library(tidyverse)
+library(here)
+```
+
+#Load in data
+```{r}
+gantt_chart <- read.csv("timeline_data_Menhaden.csv", header = T)
+glimpse(gantt_chart)
+#unique(gantt_chart$Activity)
+```
+
+#Clean up and plot your gant chart
+
+```{r}
+#Set your timeline events
+acts <- c("Hire masters student",
+"Sample juvenile menhaden",
+"Sample adult menhaden",
+"Perform otolith shape analysis",
+"Develop alternative spatial SS models",
+"Incorporate tagging data in SS model",
+"Simulation testing to assess model validity",
+"Perform comparion of BAM and SS models",
+"Develop species distribution model",
+"Document differences and similaties in assessment results",
+"Results sharing with industry, public and stakeholder groups",
+"Presentation to Gulf States Marine Fisheries Commission meeting",
+"Write journal article",
+"Presentation at scientific/public meetings",
+"Project team meeting",
+"Mid-term project report",
+"Code and analyses sharing",
+"Presentations mid-project (e.g. seminars, lab meetings, etc)", 
+"End of project event",
+"Final Report"
+)
+
+#Set your objective #s and overall project management pieces
+els <- c("One", "Two", "Three", "Four", "Project management")
+
+g.gantt_chart <- gantt_chart %>% 
+  pivot_longer(cols= 3:4, names_to = "state", values_to = "date") %>% 
+  mutate(date = as.Date(date, "%Y.%m.%d"),
+         Activity=factor(Activity, acts[length(acts):1]))
+
+#Plot your Gantt chart!
+p1 <- ggplot(g.gantt_chart, aes(date, Activity, colour = Objective)) +
+  geom_line(size = 10) +
+  scale_color_manual(values=c('One' = "darkcyan", "Two"= "skyblue", 'Three' = "darkolivegreen4", 'Four' = "goldenrod1", "Project Management" = "coral"), name="Objective") +
+  labs(x="Project month", y=NULL, title="Project timeline") +
+  theme_gray(base_size=14) +
+  theme(legend.position = "bottom")
+p1
+
+# Things to note:
+# Need to rearrange the legend to show objectives in correct order
+# Also, showing discrete team meetings (instead of a giant color block) would be useful.
+```

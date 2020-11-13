@@ -1,0 +1,27 @@
+Objective,Activity,Start,End
+One,Hire masters student,2021.02.01,2021.02.28
+One,Sample juvenile menhaden,2021.02.01,2021.03.30
+One,Sample adult menhaden,2021.08.01,2021.10.31
+One,Perform otolith shape analysis,2021.02.01,2021.03.30
+One,Perform otolith shape analysis,2021.08.01,2021.10.31
+One,Write journal article,2021.09.01,2021.11.30
+Two,Develop alternative spatial SS models,2021.04.01,2021.09.30
+Two,Incorporate tagging data in SS model,2021.05.01,2021.10.31
+Two,Simulation testing to assess model validity,2021.08.01,2021.10.31
+Two,Write journal article,2021.12.01,2022.01.31
+Three,Perform comparion of BAM and SS models,2021.09.15,2022.01.05
+Three,Document differences and similaties in assessment results,2021.09.15,2022.01.05
+Four,"Results sharing with industry, public and stakeholder groups",2021.10.01,2022.01.31
+Four,Presentation to Gulf States Marine Fisheries Commission meeting,2021.04.01,2021.05.30
+Four,Presentation to Gulf States Marine Fisheries Commission meeting,2021.09.01,2021.11.30
+Four,Presentation at scientific/public meetings,2021.09.01,2021.11.01
+Four,Presentation at scientific/public meetings,2021.12.01,2022.01.31
+Project Management,Project team meeting,2021.02.01,2021.02.15
+Project Management,Project team meeting,2021.05.01,2021.05.15
+Project Management,Project team meeting,2021.08.01,2021.08.15
+Project Management,Project team meeting,2021.11.01,2021.11.15
+Project Management,Mid-term project report,2021.08.01,2021.08.31
+Project Management,Code and analyses sharing,2021.11.01,2022.01.31
+Project Management,End of project event,2022.01.01,2022.01.31
+Project Management,"Presentations mid-project (e.g. seminars, lab meetings, etc)",2021.08.01,2021.08.31
+Project Management,Final Report,2022.01.01,2022.01.31
